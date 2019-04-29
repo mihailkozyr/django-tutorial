@@ -1,0 +1,33 @@
+==================================================
+Tutorial 1
+==================================================
+
+-- Check installed Django version
+python -m django --version
+
+-- Creating project
+django-admin startproject mysite
+
+-- Run development server
+python manage.py runserver
+
+-- Creating application
+python manage.py startapp polls
+
+==================================================
+Tutorial 2
+==================================================
+-- Creating internal tables in DB
+python manage.py migrate
+
+python manage.py makemigrations polls -- prepare changes in models.py
+manage.py sqlmigrate polls 0001 -- show SQL. not required
+python manage.py migrate -- execute in the database
+
+Workflow:
+- Change your models (in models.py).
+- Run python manage.py makemigrations to create migrations for those changes
+- Run python manage.py migrate to apply those changes to the database.
+
+-- Models API (similar to CRUD in Mongo DB)
+-- Admin'ka
