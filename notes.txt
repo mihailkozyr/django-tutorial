@@ -29,5 +29,5 @@ Workflow:
 - Run python manage.py makemigrations to create migrations for those changes
 - Run python manage.py migrate to apply those changes to the database.
 
--- Models API (similar to CRUD in Mongo DB)
+-- Models API (similar to CRUD in MongoDB)
 -- Admin'ka
