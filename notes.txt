@@ -30,4 +30,20 @@ Workflow:
 - Run python manage.py migrate to apply those changes to the database.
 
 -- Models API (similar to CRUD in MongoDB)
+from polls.models import Choice, Question
+from django.utils import timezone
+q = Question(question_text="What's new?", pub_date=timezone.now())
+q.save()
+Question.objects.filter(id=1)
+Question.objects.get(pk=1)
+q.choice_set.all() -- get values from choice foreign's key table
+
 -- Admin'ka
+python manage.py createsuperuser
+
+polls/admin.py
+from django.contrib import admin
+
+from .models import Question
+
+admin.site.register(Question)
